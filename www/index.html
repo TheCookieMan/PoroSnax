@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>poro</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body onload="premiereLaunch(); nbrGateaux(); verifNote();">
+    <div id="border" class="titre">
+        <div id="menu" onclick="apparition(); progression();"><i class="fa fa-list" aria-hidden="true"></i></div>
+        <h1>POROSNAX</h1>
+    </div>
+
+    <div id="poro" class="style"></div>
+    <div id="coeur"></div>
+    <div id="coeurUn"></div>
+    <div id="btn" onclick="giveSnack(); animation();">
+        <div class="porosnacks"></div>
+        <div class="txt">Donner un porosnax 😃</div>
+        <div id="nbrsnacks">Nombre de biscuits donnés : <span id="gateaux"></span></div>
+    </div>
+
+
+    <div id="succes">
+        <div class="titre">
+            <div id="croix" onclick="disparition();"><i class="fa fa-times" aria-hidden="true"></i></div>
+            <p>SUCCES</p>
+        </div>
+        <div class="stylesucces">
+            <p>Jeu installé</p>
+            <div class="bouton-ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+        </div>
+        <div class="stylesucces">
+            <p>Noter le jeu</p>
+            <div id="btn-noter" class="lien-noter"><i id="icone" class="fa fa-star" aria-hidden="true"></i>
+                <a href="#" id="lienA" onclick="open('https://play.google.com/store/apps/details?id=com.PoroSnax.app', '_blank', 'location=yes'); note();"></a>
+            </div>
+        </div>
+        <div class="stylesucces">
+            <p>1.000 porosnax donnés</p>
+            <div class="container">
+                <div id="barre">
+                    <div id="pourcentage" class="pourcentage"></div>
+                </div>
+            </div>
+        </div>
+        <div class="stylesucces">
+            <p>100.000 porosnax donnés</p>
+            <div class="container">
+                <div id="barreUne">
+                    <div id="pourcentageUn" class="pourcentage"></div>
+                </div>
+            </div>
+        </div>
+        <div class="stylesucces">
+            <p>1.000.000 porosnax donnés</p>
+            <div class="container">
+                <div id="barreDeux">
+                    <div id="pourcentageDeux" class="pourcentage"></div>
+                </div>
+            </div>
+        </div>
+        <div class="stylesucces">
+            <p>Vous voulez recommencer le jeu ?</p>
+            <div id="reinit" onclick="reinit(0)">Réinitialiser</div>
+        </div>
+        <div class="stylefooter">
+            <p id="cordova">Application développée à l'aide de Apache&nbsp;Cordova</p>
+            <p>&copy;&nbsp;TheCookieFactory</p>
+        </div>
+    </div>
+    
+    <div id="popup">
+        <p>Êtes-vous sûr de vouloir réinitialiser vos données&nbsp;?</p>
+        <div id="btnNon" class="btnReinit" onclick="reinit(1)">Non</div>
+        <div id="btnOui" class="btnReinit" onclick="reinit(2)">Oui</div>
+        <div id="poroColere"></div>
+    </div>
+</body>
+
+</html>
